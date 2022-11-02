@@ -1,0 +1,107 @@
+.communication {
+  margin-right: 38px;
+}
+
+.communication__title h2 {
+  color: $color-default-white;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 6px 0 21px;
+  letter-spacing: 0.05em;
+}
+
+.communication__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.communication__item {
+  padding: 0;
+
+  &--phone {
+    padding-top: 5px;
+  }
+}
+
+.communication__link {
+  font-family: $ff-PTMono;
+  color: $color-default-white;
+  opacity: 70%;
+  line-height: 21px;
+  cursor: pointer;
+
+  &--phone {
+    line-height: 25px;
+  }
+
+  &:hover {
+    color: $color-deep-sky-blue;
+  }
+}
+
+.communication__button {
+  display: none;
+}
+
+@media (max-width: $vp-1023) {
+  .communication {
+    margin: 0 13px 0 0;
+  }
+
+  .communication__item {
+    &--phone {
+      padding-top: 4px;
+    }
+  }
+}
+
+@media (max-width: $vp-767) {
+  .communication {
+    margin: 0;
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+  }
+
+  .communication__container {
+    padding: 0 25px;
+    position: relative;
+  }
+
+  .communication__title h2 {
+    margin: 22px 0 21px;
+    font-weight: 400;
+  }
+
+  .communication__list {
+    padding: 0 0 15px;
+  }
+
+  .communication__item {
+    &--address {
+      padding: 2px 0 4px;
+    }
+
+    &--phone {
+      padding-top: 6px;
+    }
+  }
+
+  .communication__link {
+    font-size: 14px;
+    line-height: 18.9px;
+  }
+
+  .communication__button {
+    position: absolute;
+    top: -7px;
+    right: 23px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: $color-title-black-pearl;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+  }
+}

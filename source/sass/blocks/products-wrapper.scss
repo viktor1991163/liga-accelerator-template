@@ -1,0 +1,16 @@
+.products-wrapper {
+  background-color: $color-title-black-pearl;
+  padding: 65px 0;
+}
+
+@media (max-width: $vp-1023) {
+  .products-wrapper {
+    padding: 55px 0;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .products-wrapper {
+    padding: 46px 0 56px;
+  }
+}

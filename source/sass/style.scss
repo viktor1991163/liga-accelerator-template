@@ -1,75 +1,60 @@
-// Vendor
-// ---------------------------------
-
-@import "vendor/normalize";
-// Swiper 7.4.1
-// @import "vendor/swiper";
-
 // Global
-// ---------------------------------
 
-@import "variables";
-@import "mixins";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/fonts.scss";
+@import "global/reboot.scss";
+@import "global/utils.scss";
 
 // Blocks
-// ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
+@import "blocks/btn.scss";
+@import "./blocks/title.scss";
 
-// ---------------------------------
+// Blocks
 
-// ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
+@import "blocks/modal.scss";
+@import "blocks/accordion.scss";
 
-// ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
+// header
 
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-// но не используем для текстовых полей ( input, textarea )
-// так же в сборке есть отдельный миксин для hover
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-// для focus
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-// и для active
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
-// адаптив пишем внутри каждого класса (смотрим container.scss)
+@import "./blocks/header-container.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-logo.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/button-block.scss";
 
-// для фикса проблем с vh на iOS в сборке подключен скрипт
-// используя vh на проекте задавайте их также как в примере в utils.scss
+// main block
 
-// для любых transition обязательно указывайте transition-property
-// transition: $trans-default ❌ ---> transition: color $trans-default ✅
+@import "./blocks/main-container.scss";
+@import "./blocks/promo-wrapper.scss";
+@import "./blocks/promo.scss";
+
+// main block
+
+@import "./blocks/advantages-wrapper.scss";
+@import "./blocks/advantages.scss";
+
+// main block
+
+@import "./blocks/about-wrapper.scss";
+@import "./blocks/about.scss";
+
+// main block
+
+@import "./blocks/products-wrapper.scss";
+@import "./blocks/products.scss";
+
+// main block
+
+@import "./blocks/feedback-wrapper.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/form.scss";
+
+// footer
+
+@import "./blocks/main-footer-wrapper.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/communication.scss";

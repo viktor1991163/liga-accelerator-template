@@ -1,0 +1,36 @@
+.main-logo {
+  width: 215px;
+
+  &__link {
+    cursor: pointer;
+    max-width: 215px;
+
+    &:hover {
+      opacity: 50%;
+    }
+  }
+
+  &__icon--mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $vp-1023) {
+  .main-logo {
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .main-logo {
+    padding-bottom: 0;
+
+    &__icon--header {
+      display: none;
+    }
+
+    &__icon--mobile {
+      display: block;
+    }
+  }
+}

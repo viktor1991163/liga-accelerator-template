@@ -1,0 +1,124 @@
+.advantages {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.advantages__item {
+  cursor: pointer;
+  padding: 40px 40px 70px;
+  border: 1px solid $color-border-whisper;
+  border-left: 5px solid $color-deep-sky-blue;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__icon {
+  fill: $color-deep-sky-blue;
+}
+
+.advantages__subtitle {
+  & h3 {
+    font-family: $ff-RobotoCondensed;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 14px;
+    color: $color-black-pearl;
+    margin: 30px 0 0;
+  }
+
+  & p {
+    max-width: 505px;
+    font-family: $ff-PTMono;
+    line-height: 21.6px;
+    margin: 23px 0 0;
+    color: $color-black-pearl;
+  }
+}
+
+.advantages__item:hover {
+  background-color: $color-deep-sky-blue;
+}
+
+.advantages__item:hover .advantages__icon {
+  fill: $color-alice-blue;
+}
+
+.advantages__item:hover .advantages__subtitle h3 {
+  color: $color-alice-blue;
+}
+
+.advantages__item:hover .advantages__subtitle p {
+  color: $color-alice-blue;
+}
+
+@media (max-width: $vp-1023) {
+  .advantages {
+    padding: 0 50px;
+  }
+
+  .advantages__list {
+    gap: 30px 29px;
+  }
+
+  .advantages__item {
+    padding: 40px 30px 33px 40px;
+  }
+
+  .advantages__subtitle {
+    & h3 {
+      line-height: 33.75px;
+      margin: 15px 0 0;
+    }
+
+    & p {
+      max-width: 97%;
+      margin: 8px 0 0;
+    }
+  }
+}
+
+@media (max-width: $vp-767) {
+  .advantages {
+    padding: 0 25px;
+  }
+
+  .advantages__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 340px) repeat(2, 325px);
+  }
+
+  .advantages__item {
+    padding: 30px 25px 55px;
+  }
+
+  .advantages__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantages__subtitle {
+    & h3 {
+      margin: 15px 0 0;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    & p {
+      margin: 10px 0 0;
+      font-size: 14px;
+      line-height: 18.9px;
+    }
+  }
+}

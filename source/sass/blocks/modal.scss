@@ -5,23 +5,18 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity $trans-modal,
     transform $trans-modal,
     visibility $trans-modal;
-
   pointer-events: none;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -31,7 +26,6 @@
 
   &__wrapper {
     position: relative;
-
     display: flex;
     flex-shrink: 0;
     justify-content: center;
@@ -40,7 +34,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-767 {
+    @include vp-769 {
       padding: 60px 16px;
     }
   }
@@ -49,22 +43,19 @@
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     cursor: pointer;
   }
 
   &__content {
     position: relative;
-
     width: 600px;
     padding: 40px;
+    background-color: $color-deep-sky-blue;
+    border-radius: 3px;
 
-    background-color: $color-default-white;
-
-    @include vp-767 {
+    @include vp-769 {
       width: 100%;
       padding: 20px;
     }
@@ -73,16 +64,20 @@
   &__close-btn {
     position: absolute;
     top: 22px;
-    right: 22px;
+    right: 15px;
     z-index: 1;
-
     width: 40px;
     height: 40px;
     padding: 0;
-
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &:focus {
+      background-color: $color-default-black;
+      outline: 2px solid $color-neon-blue;
+      border-radius: 10%;
+    }
   }
 
   &--responsive {
@@ -95,7 +90,7 @@
     .modal__content {
       width: auto;
 
-      @include vp-767 {
+      @include vp-769 {
         width: 100%;
       }
     }
@@ -113,7 +108,150 @@
     transform: scale(1);
     visibility: visible;
     opacity: 1;
-
     pointer-events: auto;
+  }
+
+  &__title {
+    font-family: $ff-RobotoCondensed;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42.19px;
+    color: $color-default-white;
+    margin: 0 0 5px;
+  }
+
+  &__description {
+    width: 420px;
+    font-family: $ff-PTMono;
+    font-size: 16px;
+    line-height: 21.5px;
+    color: $color-default-white;
+    margin: 0 0 40px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__row {
+    width: 100%;
+    margin-bottom: 20px;
+
+    & input {
+      width: inherit;
+      border: none;
+      background-color: $color-input-black-pearl;
+      padding: 14px;
+      font-family: $ff-PTMono;
+      font-size: 16px;
+      line-height: 21.5px;
+      color: $color-default-white;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &::-webkit-input-placeholder {
+        color: $color-default-white;
+      }
+
+      &:focus {
+        outline: 2px solid $color-neon-blue;
+        background-color: $color-default-black;
+      }
+    }
+
+    & textarea {
+      width: inherit;
+      margin: 0;
+      min-height: 155px;
+      border: none;
+      background-color: $color-input-black-pearl;
+      padding: 24px 15px;
+      font-family: $ff-PTMono;
+      color: $color-default-white;
+      line-height: 21.5px;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &::-webkit-input-placeholder {
+        color: $color-default-white;
+      }
+
+      &:focus {
+        outline: 2px solid $color-neon-blue;
+        background-color: $color-default-black;
+      }
+    }
+  }
+
+  &__button {
+    width: inherit;
+    background-color: $color-black-pearl;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 12px;
+
+    &:focus {
+      outline: 3px solid $color-neon-blue;
+      opacity: 90%;
+    }
+  }
+
+  &__row--agreement {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    & label {
+      display: flex;
+      font-family: $ff-PTMono;
+      font-size: 14px;
+      line-height: 15.68px;
+      color: $color-default-white;
+      opacity: 80%;
+      cursor: pointer;
+      margin-left: 11px;
+    }
+
+    & span {
+      position: relative;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-default-white;
+      border-radius: 1px;
+      cursor: pointer;
+    }
+  }
+
+  .modal__row--agreement {
+    & input[type="checkbox"]:checked + span {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 4px;
+        top: 35%;
+        left: 25%;
+        background-color: $color-default-white;
+        transform: rotate(145deg);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 6px;
+        top: 25%;
+        right: 40%;
+        background-color: $color-default-white;
+        transform: rotate(45deg);
+      }
+    }
+
+    & input:focus-visible + span {
+      background-color: $color-default-black;
+    }
   }
 }

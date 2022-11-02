@@ -1,0 +1,191 @@
+.form {
+  background-color: $color-background-deep-sky-blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__row {
+  width: 98.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &--agreement {
+    margin-top: 15px;
+    margin-bottom: 0;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  & input {
+    width: 47.5%;
+    border: none;
+    background-color: $color-input-black-pearl;
+    padding: 14px;
+    font-family: $ff-PTMono;
+    font-size: 16px;
+    line-height: 21.5px;
+    color: $color-default-white;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &::-webkit-input-placeholder {
+      color: $color-default-white;
+    }
+
+    &:focus {
+      outline: 2px solid $color-neon-blue;
+      background-color: $color-default-black;
+    }
+  }
+
+  & textarea {
+    width: 100%;
+    margin: 0;
+    min-height: 155px;
+    border: none;
+    background-color: $color-input-black-pearl;
+    padding: 24px 15px;
+    font-family: $ff-PTMono;
+    color: $color-default-white;
+    line-height: 21.5px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &::-webkit-input-placeholder {
+      color: $color-default-white;
+    }
+
+    &:focus {
+      outline: 2px solid $color-neon-blue;
+      background-color: $color-default-black;
+    }
+  }
+}
+
+.form__button {
+  background-color: $color-black-pearl;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 12px;
+  width: 46%;
+
+  &:focus {
+    outline: 3px solid $color-neon-blue;
+    opacity: 90%;
+  }
+}
+
+.form__agreement {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 45.5%;
+
+  & label {
+    display: flex;
+    font-family: $ff-PTMono;
+    font-size: 14px;
+    line-height: 15.68px;
+    color: $color-default-white;
+    opacity: 80%;
+    cursor: pointer;
+    margin-left: 11px;
+    position: relative;
+  }
+
+  & span {
+    position: relative;
+    width: 20px;
+    height: 15px;
+    border: 1px solid $color-default-white;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+
+  & input[type="checkbox"]:checked + span {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 4px;
+      top: 35%;
+      left: 25%;
+      background-color: $color-default-white;
+      transform: rotate(145deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 6px;
+      top: 25%;
+      right: 40%;
+      background-color: $color-default-white;
+      transform: rotate(45deg);
+    }
+  }
+
+  & input:focus-visible + span {
+    background-color: $color-default-black;
+  }
+}
+
+@media (max-width: $vp-1023) {
+  .form__row {
+    width: 100%;
+
+    &--agreement {
+      align-items: center;
+    }
+
+    & textarea {
+      padding: 30px 15px;
+    }
+  }
+
+  .form__button {
+    width: 39.5%;
+  }
+
+  .form__agreement {
+    width: 47.5%;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .form__row {
+    &--inputs {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    &--agreement {
+      flex-direction: column-reverse;
+      margin-top: 10px;
+    }
+
+    & input {
+      width: 100%;
+      padding: 12px 14px 16px 15px;
+      margin-bottom: 20px;
+    }
+
+    & textarea {
+      min-height: 180px;
+      padding: 23px 15px;
+    }
+  }
+
+  .form__button {
+    width: 100%;
+  }
+
+  .form__agreement {
+    width: 100%;
+    margin-top: 25px;
+    align-self: flex-start;
+  }
+}

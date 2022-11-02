@@ -1,0 +1,30 @@
+.feedback-wrapper {
+  position: relative;
+  background-color: $color-background-deep-sky-blue;
+  padding: 150px 0 225px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    border-top: 840px solid rgba(4, 24, 39, 0.5);
+    border-right: 970px solid $color-transparent;
+  }
+}
+
+@media (max-width: $vp-1023) {
+  .feedback-wrapper {
+    padding: 25px 0 100px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $vp-767) {
+  .feedback-wrapper {
+    padding: 25px 0;
+  }
+}

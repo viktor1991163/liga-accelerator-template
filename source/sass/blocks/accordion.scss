@@ -1,0 +1,63 @@
+@media (max-width: $vp-767) {
+  .accordion--closed .menu__list {
+    display: none;
+  }
+
+  .accordion--closed .communication__list {
+    display: none;
+  }
+
+  .accordion--oppened .menu__list {
+    display: block;
+  }
+
+  .accordion--oppened .communication__list {
+    display: block;
+  }
+
+  .accordion--oppened .menu__button {
+    &::after {
+      @include btn-acc;
+    }
+  }
+
+  .accordion--oppened .communication__button {
+    &::after {
+      @include btn-acc;
+    }
+  }
+
+  .accordion--closed .menu__button {
+    &::after {
+      @include btn-acc;
+    }
+
+    &::before {
+      @include btn-acc;
+      transform: rotate(90deg);
+    }
+  }
+
+  .accordion--closed .communication__button {
+    &::after {
+      @include btn-acc;
+    }
+
+    &::before {
+      @include btn-acc;
+      transform: rotate(90deg);
+    }
+  }
+
+  .accordion--nojs .menu__button {
+    &::after {
+      @include btn-acc;
+    }
+  }
+
+  .accordion--nojs .communication__button {
+    &::after {
+      @include btn-acc;
+    }
+  }
+}

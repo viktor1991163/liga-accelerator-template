@@ -1,0 +1,15 @@
+.advantages-wrapper {
+  padding: 123px 0 60px;
+}
+
+@media (max-width: $vp-1023) {
+  .advantages-wrapper {
+    padding: 80px 0 40px;
+  }
+}
+
+@media (max-width: $vp-767) {
+  .advantages-wrapper {
+    padding: 50px 0 25px;
+  }
+}
