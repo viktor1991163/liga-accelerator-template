@@ -2,12 +2,12 @@ let menu = document.querySelector('.menu__container');
 let communication = document.querySelector('.communication__container');
 
 
-menu.classList.remove('menu__container--nojs');
+menu.classList.remove('accordion--nojs');
 menu.classList.add('accordion--closed');
-communication.classList.remove('communication__container--nojs');
+communication.classList.remove('accordion--nojs');
 communication.classList.add('accordion--closed');
 
-document.querySelectorAll('.btn').forEach(function (target) {
+document.querySelectorAll('.btn-acc').forEach(function (target) {
   target.addEventListener('click', function (event) {
     document.querySelectorAll('.accordion').forEach(function (tab) {
       tab.classList.remove('accordion--oppened');

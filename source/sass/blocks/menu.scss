@@ -2,6 +2,16 @@
   margin-right: 30px;
 }
 
+.menu__title {
+  padding: 0;
+  background-color: inherit;
+  text-align: left;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
 .menu__title h2 {
   color: $color-default-white;
   font-size: 15px;
@@ -60,11 +70,20 @@
 
   .menu__container {
     padding: 0 25px;
-    position: relative;
   }
 
   .menu__list {
     padding-bottom: 20px;
+  }
+
+  .menu__title {
+    position: relative;
+    padding: 1px 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 80%;
+    }
   }
 
   .menu__title h2 {
@@ -74,14 +93,13 @@
 
   .menu__button {
     position: absolute;
-    top: -7px;
-    right: 22px;
+    width: 15px;
+    height: 15px;
+    top: 32%;
+    right: 0;
     display: block;
-    width: 25px;
-    height: 25px;
     background-color: $color-title-black-pearl;
-    cursor: pointer;
     border: none;
-    padding: 5px;
+    cursor: pointer;
   }
 }

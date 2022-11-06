@@ -38,6 +38,11 @@
       outline: 2px solid $color-neon-blue;
       background-color: $color-default-black;
     }
+
+    &::placeholder {
+      color: $color-default-white;
+      opacity: 80%;
+    }
   }
 
   & textarea {
@@ -60,6 +65,11 @@
     &:focus {
       outline: 2px solid $color-neon-blue;
       background-color: $color-default-black;
+    }
+
+    &::placeholder {
+      color: $color-default-white;
+      opacity: 80%;
     }
   }
 }

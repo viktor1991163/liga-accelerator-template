@@ -9,13 +9,13 @@
 
 @media (max-width: $vp-1023) {
   .main-header {
-    padding: 20px 50px 20px;
+    padding: 20px 50px 15px;
   }
 }
 
 @media (max-width: $vp-767) {
   .main-header {
-    padding: 10px 35px 20px 26px;
+    padding: 15px 35px 15px 26px;
     min-width: 320px;
   }
 }
