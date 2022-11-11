@@ -6,3 +6,9 @@
   right: 0;
   z-index: 5;
 }
+
+@media (max-width: $vp-1023) {
+  .header-container {
+    position: static;
+  }
+}

@@ -88,20 +88,18 @@
 }
 
 .form__agreement {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
   width: 45.5%;
 
   & label {
     display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
     font-family: $ff-PTMono;
     font-size: 14px;
     line-height: 15.68px;
     color: $color-default-white;
     opacity: 80%;
     cursor: pointer;
-    margin-left: 11px;
     position: relative;
   }
 
@@ -112,6 +110,7 @@
     border: 1px solid $color-default-white;
     border-radius: 1px;
     cursor: pointer;
+    margin-right: 10px;
   }
 
   & input[type="checkbox"]:checked + span {
@@ -196,6 +195,5 @@
   .form__agreement {
     width: 100%;
     margin-top: 25px;
-    align-self: flex-start;
   }
 }

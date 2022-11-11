@@ -307,14 +307,14 @@ button,
 .modal__content {
   position: relative;
   width: 600px;
-  padding: 40px;
+  padding: 35px 40px 20px;
   background-color: #00b2ff;
   border-radius: 3px;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
+  top: 17px;
   right: 15px;
   z-index: 1;
   width: 40px;
@@ -459,10 +459,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -472,13 +468,17 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   font-family: "PT Mono", "Courier New", "Courier", monospace;
   font-size: 14px;
   line-height: 15.68px;
   color: #ffffff;
   opacity: 80%;
   cursor: pointer;
-  margin-left: 11px;
+  margin-left: 10px;
 }
 
 .modal__row--agreement span {
@@ -488,6 +488,7 @@ button,
   border: 1px solid #ffffff;
   border-radius: 1px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .modal .modal__row--agreement input[type=checkbox]:checked + span::before {
@@ -548,6 +549,8 @@ button,
 
 .main-logo {
   width: 215px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .main-logo__link {
@@ -564,7 +567,7 @@ button,
 }
 
 .contacts {
-  margin: 0 0 5px 10px;
+  margin: 0 0 10px;
 }
 
 .contacts__list {
@@ -583,7 +586,7 @@ button,
 }
 
 .contacts__item {
-  width: 225px;
+  width: 230px;
 }
 
 .contacts__link {
@@ -593,6 +596,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 10px;
 }
 
 .contacts__link:hover .contacts__icon {
@@ -604,8 +608,8 @@ button,
 }
 
 .contacts__mail {
-  margin-bottom: 2px;
-  margin-left: 18px;
+  margin-bottom: 3px;
+  margin-left: 13px;
   font-family: "PT Mono", "Courier New", "Courier", monospace;
   color: #f2f5f6;
 }
@@ -623,7 +627,10 @@ button,
 }
 
 .button-block {
-  margin: 0 60px 11px 0;
+  margin-right: 60px;
+  margin-top: 5px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .button-block__button {
@@ -644,9 +651,7 @@ button,
 }
 
 .promo-wrapper {
-  position: relative;
   background-color: #041827;
-  z-index: 1;
 }
 
 .promo {
@@ -677,6 +682,7 @@ button,
   color: #f2f5f6;
   margin: 0;
   letter-spacing: 0.07em;
+  z-index: 2;
 }
 
 .promo__container p {
@@ -686,6 +692,7 @@ button,
   color: #f2f5f6;
   margin: 33px 0 27px;
   width: 685px;
+  z-index: 2;
 }
 
 .promo__button {
@@ -696,6 +703,7 @@ button,
   background-color: #00b2ff;
   margin-top: 20px;
   padding: 14px 0 17px;
+  z-index: 2;
 }
 
 .promo__button--mobile {
@@ -706,7 +714,7 @@ button,
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   height: 880px;
   width: 100%;
 }
@@ -729,13 +737,10 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-  grid-template-rows: repeat(2, 1fr);
   gap: 30px;
 }
 
 .advantages__item {
-  cursor: pointer;
   padding: 40px 40px 70px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
@@ -747,6 +752,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-height: 300px;
 }
 
 .advantages__icon {
@@ -758,8 +764,8 @@ button,
   font-weight: 400;
   font-size: 24px;
   line-height: 14px;
-  color: #041427;
   margin: 30px 0 0;
+  color: #00b2ff;
 }
 
 .advantages__subtitle p {
@@ -880,13 +886,16 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 55px 0 75px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 30px 0 50px;
   width: 100%;
   height: 100%;
 }
 
 .products__item {
   width: 28.7%;
+  padding: 25px 0;
 }
 
 .products__link {
@@ -1160,16 +1169,6 @@ button,
 }
 
 .form__agreement {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 45.5%;
 }
 
@@ -1177,13 +1176,19 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   font-family: "PT Mono", "Courier New", "Courier", monospace;
   font-size: 14px;
   line-height: 15.68px;
   color: #ffffff;
   opacity: 80%;
   cursor: pointer;
-  margin-left: 11px;
   position: relative;
 }
 
@@ -1194,6 +1199,7 @@ button,
   border: 1px solid #ffffff;
   border-radius: 1px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .form__agreement input[type=checkbox]:checked + span::before {
@@ -1248,9 +1254,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   margin-left: 160px;
 }
 
@@ -1288,7 +1291,8 @@ button,
 }
 
 .menu {
-  margin-right: 30px;
+  margin-right: 10px;
+  width: 60%;
 }
 
 .menu__title {
@@ -1307,28 +1311,24 @@ button,
   line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 6px 0 21px;
+  margin: 6px 0 17px;
 }
 
 .menu__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (-webkit-max-content)[4];
-  -ms-grid-rows: (max-content)[4];
-  grid-template-rows: repeat(4, -webkit-max-content);
-  grid-template-rows: repeat(4, max-content);
-  grid-auto-flow: column;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
-  row-gap: 5px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
 }
 
 .menu__item {
-  max-width: 220px;
+  padding-top: 5px;
+}
+
+.menu__item:last-child {
+  padding-bottom: 50px;
 }
 
 .menu__link {
@@ -1347,7 +1347,8 @@ button,
 }
 
 .communication {
-  margin-right: 38px;
+  width: 40%;
+  margin-right: 20px;
 }
 
 .communication__title {
@@ -1404,6 +1405,10 @@ button,
 }
 
 @media (max-width: 1023px) {
+  .header-container {
+    position: static;
+  }
+
   .main-header {
     padding: 20px 50px 15px;
   }
@@ -1435,6 +1440,9 @@ button,
     -ms-flex-pack: center;
     justify-content: center;
     width: 40px;
+  }
+
+  .contacts__link {
     padding: 10px;
   }
 
@@ -1452,7 +1460,7 @@ button,
   }
 
   .promo__container {
-    padding: 170px 0 205px;
+    padding: 69px 0 205px;
   }
 
   .promo__container h1 {
@@ -1486,6 +1494,7 @@ button,
 
   .advantages__item {
     padding: 40px 30px 33px 40px;
+    min-height: 360px;
   }
 
   .advantages__subtitle h3 {
@@ -1554,6 +1563,7 @@ button,
   .products__item {
     width: 100%;
     margin-bottom: 30px;
+    padding: 0;
   }
 
   .products__item:last-child {
@@ -1820,7 +1830,7 @@ button,
   }
 
   .main-header {
-    padding: 15px 35px 15px 26px;
+    padding: 10px 35px 20px 26px;
     min-width: 320px;
   }
 
@@ -1850,7 +1860,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 149px 0 190px;
+    padding: 80px 0 184px;
   }
 
   .promo__container h1 {
@@ -1868,7 +1878,6 @@ button,
   }
 
   .promo__button {
-    max-width: 271px;
     font-size: 14px;
     line-height: 21.7px;
     margin: 0;
@@ -1881,6 +1890,7 @@ button,
 
   .promo__button--mobile {
     display: block;
+    width: 100%;
   }
 
   .promo__img img {
@@ -1888,7 +1898,7 @@ button,
   }
 
   .advantages-wrapper {
-    padding: 50px 0 25px;
+    padding: 55px 0 25px;
   }
 
   .advantages {
@@ -1898,12 +1908,18 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: (340px)[2] (325px)[2];
-    grid-template-rows: repeat(2, 340px) repeat(2, 325px);
   }
 
   .advantages__item {
     padding: 30px 25px 55px;
+  }
+
+  .advantages__item--desktop {
+    min-height: 340px;
+  }
+
+  .advantages__item--mobile {
+    min-height: 325px;
   }
 
   .advantages__icon {
@@ -1991,13 +2007,13 @@ button,
   }
 
   .products__link figure::after {
-    width: 15%;
-    height: 16%;
+    width: 40px;
+    height: 40px;
   }
 
   .products__link figure::before {
-    bottom: 7%;
-    right: 6.5%;
+    bottom: 17px;
+    right: 17px;
     width: 4px;
     height: 4px;
   }
@@ -2067,8 +2083,6 @@ button,
   .form__agreement {
     width: 100%;
     margin-top: 25px;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
   }
 
   .main-footer-wrapper {
@@ -2109,6 +2123,7 @@ button,
   }
 
   .menu {
+    width: 100%;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
@@ -2119,6 +2134,9 @@ button,
 
   .menu__list {
     padding-bottom: 20px;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
   }
 
   .menu__title {
@@ -2149,6 +2167,7 @@ button,
   }
 
   .communication {
+    width: 100%;
     margin: 0;
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }

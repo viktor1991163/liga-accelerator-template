@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Магазин печатных плат">
     <title>Smart-Device</title>
-    <link rel="preload" href="/css/style.min.css" as="style">
-    <link rel="preload" href="/fonts/pt-mono-regular.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto-condensed-bold.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto-condensed-regular.woff2" as="font">
-    <link rel="preload" href="/fonts/roboto-medium.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -89,7 +89,7 @@
               <h2 class="visually-hidden">Преимущества</h2>
 
               <ul class="advantages__list">
-                <li class="advantages__item">
+                <li class="advantages__item advantages__item--desktop">
                   <svg class="advantages__icon" width="35" height="35">
                     <use xlink:href="img/sprite.svg#speed"></use>
                   </svg>
@@ -98,7 +98,7 @@
                     <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки</p>
                   </div>
                 </li>
-                <li class="advantages__item">
+                <li class="advantages__item advantages__item--desktop">
                   <svg class="advantages__icon" width="35" height="35">
                     <use xlink:href="img/sprite.svg#partners"></use>
                   </svg>
@@ -107,7 +107,7 @@
                     <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
                   </div>
                 </li>
-                <li class="advantages__item">
+                <li class="advantages__item advantages__item--mobile">
                   <svg class="advantages__icon" width="35" height="35">
                     <use xlink:href="img/sprite.svg#privacy"></use>
                   </svg>
@@ -116,7 +116,7 @@
                     <p>По&nbsp;желанию клиента мы обеспечиваем полную конфиденциальность.</p>
                   </div>
                 </li>
-                <li class="advantages__item">
+                <li class="advantages__item advantages__item--mobile">
                   <svg class="advantages__icon" width="35" height="35">
                     <use xlink:href="img/sprite.svg#personalization"></use>
                   </svg>
@@ -218,7 +218,7 @@
                     <label class="visually-hidden" for="name">Имя</label>
                     <input type="text" id="name" name="name" placeholder="Имя" title="Введите свое имя" required>
                     <label class="visually-hidden" for="phone">Номер телефона</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="16" title="не менее 7 и не более 11 цифр" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" minlength="16" maxlength="16" title="Не более 10 цифр" required>
                   </div>
 
                   <div class="form__row form__row--comment">
@@ -229,9 +229,11 @@
                   <div class="form__row form__row--agreement">
 
                     <div class="form__agreement">
-                      <label for="agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
-                      <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required checked>
-                      <span class="form__checkbox"></span>
+                      <label for="agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных
+
+                        <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required checked>
+                        <span class="form__checkbox"></span>
+                      </label>
                     </div>
 
                     <button class="form__button btn" type="submit">Задать вопрос</button>
@@ -357,7 +359,7 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <h1 class="modal__title">Закажите звонок</h1>
-          <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
 
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -368,7 +370,7 @@
 
             <div class="modal__row">
               <label class="visually-hidden" for="phone-modal">Номер телефона</label>
-              <input type="tel" id="phone-modal" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="16" title="не менее 7 и не более 11 цифр" tabindex="2" required>
+              <input type="tel" id="phone-modal" name="phone" placeholder="Телефон" minlength="16" maxlength="16" title="не более 10 цифр" tabindex="2" required>
             </div>
 
             <div class="modal__row">
@@ -377,13 +379,14 @@
             </div>
 
             <div class="modal__row">
-              <button class="modal__button btn" type="submit" tabindex="5">Задать вопрос</button>
+              <button class="modal__button btn" type="submit" tabindex="5">Отправить</button>
             </div>
 
             <div class="modal__row modal__row--agreement">
-              <label for="agreement-modal">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
-              <input class="visually-hidden" type="checkbox" id="agreement-modal" name="agreement" tabindex="4" required checked>
-              <span class="modal__checkbox"></span>
+              <label for="agreement-modal">Я&nbsp;согласен на&nbsp;обработку персональных данных
+                <input class="visually-hidden" type="checkbox" id="agreement-modal" name="agreement" tabindex="4" required checked>
+                <span class="modal__checkbox"></span>
+              </label>
             </div>
 
           </form>

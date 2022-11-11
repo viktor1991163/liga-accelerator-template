@@ -51,7 +51,7 @@
   &__content {
     position: relative;
     width: 600px;
-    padding: 40px;
+    padding: 35px 40px 20px;
     background-color: $color-deep-sky-blue;
     border-radius: 3px;
 
@@ -63,7 +63,7 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
+    top: 17px;
     right: 15px;
     z-index: 1;
     width: 40px;
@@ -201,18 +201,18 @@
 
   &__row--agreement {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
 
     & label {
       display: flex;
+      flex-direction: row-reverse;
       font-family: $ff-PTMono;
       font-size: 14px;
       line-height: 15.68px;
       color: $color-default-white;
       opacity: 80%;
       cursor: pointer;
-      margin-left: 11px;
+      margin-left: 10px;
     }
 
     & span {
@@ -222,6 +222,7 @@
       border: 1px solid $color-default-white;
       border-radius: 1px;
       cursor: pointer;
+      margin-right: 10px;
     }
   }
 
