@@ -951,8 +951,9 @@ button,
   left: 0;
   font-size: 20px;
   line-height: 30px;
-  padding: 0 140px 0 40px;
+  padding-left: 40px;
   font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
+  max-width: 230px;
 }
 
 .feedback-wrapper {
@@ -1587,8 +1588,9 @@ button,
   }
 
   .products__link figcaption {
-    padding: 0 475px 0 45px;
+    padding-left: 45px;
     top: 37px;
+    max-width: 195px;
   }
 
   .products__link img {
@@ -1830,8 +1832,7 @@ button,
   }
 
   .main-header {
-    padding: 10px 35px 20px 26px;
-    min-width: 320px;
+    padding: 10px 25px 20px 26px;
   }
 
   .main-logo {
@@ -2021,8 +2022,9 @@ button,
   .products__link figcaption {
     font-size: 18px;
     line-height: 30px;
-    padding: 0 105px 0 30px;
+    padding-left: 30px;
     top: 25px;
+    max-width: 165px;
   }
 
   .feedback-wrapper {
