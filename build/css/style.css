@@ -651,7 +651,9 @@ button,
 }
 
 .promo-wrapper {
-  background-color: #ffffff;
+  background-color: #041827;
+  position: relative;
+  padding-bottom: 880px;
 }
 
 .promo {
@@ -661,6 +663,9 @@ button,
 }
 
 .promo__container {
+  position: absolute;
+  top: 304px;
+  left: 24.8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -671,7 +676,7 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding: 304px 0 280px 125px;
+  z-index: 2;
 }
 
 .promo__container h1 {
@@ -682,7 +687,6 @@ button,
   color: #f2f5f6;
   margin: 0;
   letter-spacing: 0.07em;
-  z-index: 2;
 }
 
 .promo__container p {
@@ -692,7 +696,6 @@ button,
   color: #f2f5f6;
   margin: 33px 0 27px;
   width: 685px;
-  z-index: 2;
 }
 
 .promo__button {
@@ -720,7 +723,7 @@ button,
 }
 
 .advantages-wrapper {
-  padding: 123px 0 60px;
+  padding: 120px 0 60px;
 }
 
 .advantages {
@@ -884,7 +887,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 55px 0 50px;
+  padding: 55px 0 75px;
   gap: 85px;
   width: 100%;
   height: 100%;
@@ -1453,12 +1456,17 @@ button,
     display: none;
   }
 
+  .promo-wrapper {
+    padding-bottom: 540px;
+  }
+
   .promo {
     padding: 0 50px;
   }
 
   .promo__container {
-    padding: 69px 0 205px;
+    top: 69px;
+    left: 6.5%;
   }
 
   .promo__container h1 {
@@ -1476,10 +1484,11 @@ button,
 
   .promo__img img {
     height: 640px;
+    top: -100px;
   }
 
   .advantages-wrapper {
-    padding: 80px 0 40px;
+    padding: 78px 0 40px;
   }
 
   .advantages {
@@ -1818,11 +1827,12 @@ button,
   }
 
   .main-header {
-    padding: 10px 25px 20px 26px;
+    padding: 10px 35px 20px 26px;
   }
 
   .main-logo {
     padding-bottom: 0;
+    padding-top: 5px;
   }
 
   .main-logo__icon--header {
@@ -1839,26 +1849,32 @@ button,
     max-width: 150px;
   }
 
+  .promo-wrapper {
+    padding-bottom: 490px;
+  }
+
   .promo {
     padding: 0 25px;
   }
 
   .promo__container {
+    top: 79px;
+    left: 7.5%;
+    right: 8%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 80px 0 184px;
   }
 
   .promo__container h1 {
-    max-width: 271px;
+    width: 100%;
     font-size: 36px;
     line-height: 42.19px;
     margin-bottom: 9px;
   }
 
   .promo__container p {
-    width: 271px;
+    width: 100%;
     font-size: 14px;
     line-height: 21.7px;
     margin: 0 0 43px;
@@ -1882,10 +1898,11 @@ button,
 
   .promo__img img {
     height: 560px;
+    top: -70px;
   }
 
   .advantages-wrapper {
-    padding: 55px 0 25px;
+    padding: 50px 0 25px;
   }
 
   .advantages {
